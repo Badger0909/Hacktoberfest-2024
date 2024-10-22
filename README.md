@@ -1,5 +1,5 @@
 
-# Contribution Guidelines :
+# Contribution Guidelines:
 
 Welcome to our project! We appreciate your interest and contributions. Please read the following guidelines carefully to ensure a smooth collaboration.
 
