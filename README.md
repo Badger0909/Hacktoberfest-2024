@@ -93,7 +93,7 @@ We look forward to your contributions and thank you for being a part of our comm
 
 ### Contributors
 
-- Add your name, by editing the `contributors.json` file in data folder:
+- Add your name to our file `contributors.json` in data folder:
 
 ```json
 [
