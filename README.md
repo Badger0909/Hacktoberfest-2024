@@ -90,3 +90,15 @@ We look forward to your contributions and thank you for being a part of our comm
 <a href="https://github.com/Badger0909/Hacktoberfest-2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Badger0909/Hacktoberfest-2024&max=1000" />
 </a>
+
+### Contributors
+
+- Add your name, by editing the `contributors.json` file in data folder:
+
+```json
+[
+  {
+    "name": "YourName"
+  }
+]
+```
