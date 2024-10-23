@@ -85,3 +85,8 @@ To keep your fork up-to-date with the main repository and avoid conflicts:
    - Regularly pull changes from the upstream repository to keep your fork updated.
 
 We look forward to your contributions and thank you for being a part of our community!
+
+## 🎁 Contributors
+<a href="https://github.com/Badger0909/Hacktoberfest-2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Badger0909/Hacktoberfest-2024&max=1000" />
+</a>
