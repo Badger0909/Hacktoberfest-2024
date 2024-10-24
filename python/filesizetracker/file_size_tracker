@@ -1,0 +1,26 @@
+import os
+
+def write_to_file(filename, content):
+    with open(filename, 'w') as f:
+        f.write(content)
+    print(f"Content written to {filename}.")
+
+def read_file(filename):
+    with open(filename, 'r') as f:
+        content = f.read()
+    return content
+
+def predict_file_size_in_mb(filename):
+    file_size_bytes = os.path.getsize(filename)
+    file_size_mb = file_size_bytes / (1024 * 1024)
+    return file_size_mb
+
+if __name__ == "__main__":
+    filename = "example_file.txt"
+    content = "Hello, this is a sample text to demonstrate file writing, reading, and size prediction."
+    write_to_file(filename, content)
+    file_content = read_file(filename)
+    print("File content:")
+    print(file_content)
+    file_size_mb = predict_file_size_in_mb(filename)
+    print(f"Predicted file size: {file_size_mb:.6f} MB")
