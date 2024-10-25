@@ -1,0 +1,35 @@
+Given two integers a and b, write a program to print all Armstrong numbers in the range from a to b(inclusive). Armstrong numbers are numbers where the sum of each digit raised to the power of the number of digits equals the number itself.
+
+Note:- This is a functional problem. You do not need to take any input. You just need to complete the function, and print the output.
+
+Input
+First Line will contain an integer a representing the start of the range.
+Second Line will contain an integer b representing the end of the range.
+Output
+Print all Armstrong numbers between a and b in a space-separated manner.
+Example
+Input
+1
+158
+
+Output
+1 2 3 4 5 6 7 8 9 153
+
+Explanation
+13 + 53 + 33 = 153.
+def print_armstrong_numbers_in_range(A, B):
+    for i in range(A,B+1):
+        num=i
+        h=i
+        digitcount=0
+        while num>0:
+            num//=10
+            digitcount+=1
+        sumofpower=0    
+        while i>0:
+            digit=i%10
+            sumofpower+=((digit)**(digitcount))
+            i//=10
+        if sumofpower==h:
+            print(h,end=" ")
+            
