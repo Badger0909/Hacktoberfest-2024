@@ -1,28 +1,27 @@
-def caesar_encode(text, shift):
-    encoded_text = ""
-    
+def caesar_cipher(text, shift, encode=True):
+    shift = shift % 26 * (1 if encode else -1)
+    result = []
+
     for char in text:
         if char.isalpha():
-            # Shift the character and wrap around the alphabet
             shift_base = ord('A') if char.isupper() else ord('a')
-            encoded_char = chr((ord(char) - shift_base + shift) % 26 + shift_base)
-            encoded_text += encoded_char
+            result.append(chr((ord(char) - shift_base + shift) % 26 + shift_base))
         else:
-            # Non-alphabetic characters remain unchanged
-            encoded_text += char
+            result.append(char)
 
-    return encoded_text
-
-def caesar_decode(text, shift):
-    return caesar_encode(text, -shift)  # Decoding is just encoding with the negative shift
+    return ''.join(result)
 
 # Example usage
 if __name__ == "__main__":
-    plaintext = input("Enter the text to encode: ")
-    shift = int(input("Enter the shift value (1-25): "))
+    try:
+        text = input("Enter text: ")
+        shift = int(input("Enter shift (1-25): "))
+        
+        encoded_text = caesar_cipher(text, shift)
+        print(f"Encoded: {encoded_text}")
+        
+        decoded_text = caesar_cipher(encoded_text, shift, encode=False)
+        print(f"Decoded: {decoded_text}")
 
-    encoded = caesar_encode(plaintext, shift)
-    print(f"Encoded text: {encoded}")
-
-    decoded = caesar_decode(encoded, shift)
-    print(f"Decoded text: {decoded}")
+    except ValueError:
+        print("Please enter a valid integer for the shift value.")
