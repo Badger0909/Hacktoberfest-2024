@@ -23,9 +23,7 @@ while playing:
     # Determine the outcome
     if player1_input == player2_input:
         print("It's a tie!")
-    elif (player1_input == "rock" and player2_input == "paper") or \
-         (player1_input == "paper" and player2_input == "scissors") or \
-         (player1_input == "scissors" and player2_input == "rock"):
+    elif outcomes.index(player2_input) == (outcomes.index(player1_input) + 1)%3:
         print("You lose!")
     else:
         print("You win!")
@@ -36,7 +34,7 @@ while playing:
     # Ask if the player wants to play again
     print("Would you like to play again? (Y/N)")
     answer = input()
-    if answer.upper() == "N":
+    if answer.upper() != "Y":
         playing = False
 # Final message
 print("Thanks for playing!")
