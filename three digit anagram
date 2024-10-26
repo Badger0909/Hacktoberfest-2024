@@ -1,0 +1,48 @@
+Introduction: 
+In the magical town of Codeville, everyone navigates their daily lives using algorithms and programming. Mahesh, new to the town, must solve a series of coding puzzles to complete his daily tasks. As Mahesh adjusts to life in Codeville, he needs your help to solve these challenges. Join Mahesh on his coding adventure and assist him in navigating through his new surroundings!
+
+Challenge 1: The Anagram Codes
+Using the prize money he received from the bank, Mahesh decides to explore the local market. Here, he encounters two merchants who offer to sell him rare artifacts. However, to ensure they are legitimate sellers, Mahesh must verify their identity using a code system. Each merchant provides a three-digit code, and Mahesh needs to determine if these codes are anagrams of each other. An anagram in this context means that both codes use the exact same digits, though possibly in a different order. 
+
+Task:
+Write a Python program to check if two 3-digit numbers are anagrams of each other or not. Two numbers are considered anagrams if the digits of one can be rearranged to form the other number. For instance, 123 and 321 are anagrams, but 123 and 322 are not.
+Input
+You will be provided with numbers num1 and num2, you can access them directly. You need to check if num1 and num2 are anagrams. Print True if the numbers are anagrams and False otherwise.
+Output
+The function are_anagrams should return "True" if A and B are anagrams of each other; otherwise, return "False".
+#code:
+def anagram(num1,num2):
+    temp1 = num1
+    num1_length =0
+    while temp1>0:
+        temp1 //=10
+        num1_length += 1
+
+    temp2 = num2
+    num2_length =0
+    while temp2>0:
+        temp2 //=10
+        num2_length += 1
+    
+    if num1_length==num2_length:
+
+        c = 0
+        e = 0
+        while num1>0:
+            d = num1%10
+            c+=d**2
+            e+=d
+            num1 = num1//10
+        while num2>0:
+            f = num2%10
+            num2 = num2//10
+            c-=f**2
+            e-=f
+        if c == 0 and e==0:
+            print("True")
+        else:
+            print("False")
+    else:
+        print("False")
+
+anagram(num1,num2)
